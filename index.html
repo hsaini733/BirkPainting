@@ -1,22 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"><!-- Open this file in Google Chrome to preview the professional painting website layout -->
-
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birk Painting | Professional Kitchener & Waterloo Painters Since 2001</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        /* --- BRAND COLOR SCHEME --- */
         :root {
-            --primary-blue: #003366;    /* Deep Professional Blue */
-            --secondary-gold: #ffcc00;  /* Warm Gold-Yellow for CTAs */
+            --primary-blue: #003366;
+            --secondary-gold: #ffcc00;
             --text-dark: #333;
             --text-light: #fff;
             --bg-light: #f8f9fa;
         }
-
-        /* --- TYPOGRAPHY & GLOBAL STYLES --- */
         body {
             font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
             margin: 0;
@@ -24,30 +20,21 @@
             color: var(--text-dark);
             scroll-behavior: smooth;
         }
-
-        /* Headlines */
         h1, h2, h3, h4, .brand-logo {
             font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
             font-weight: 700;
             margin-bottom: 20px;
         }
-
-        h1 { font-size: 48px; color: #fff; } /* Main Headline */
-        h2 { font-size: 30px; text-transform: uppercase; letter-spacing: 1px;} /* Section Titles */
-        h3 { font-size: 22px; color: var(--primary-blue); } /* Service Cards */
-        h4 { font-size: 18px; color: #555;} /* Process Titles */
-
-        /* Body text: Standard for readability, fitting 14-18px range */
+        h1 { font-size: 48px; color: #fff; }
+        h2 { font-size: 30px; text-transform: uppercase; letter-spacing: 1px;}
+        h3 { font-size: 22px; color: var(--primary-blue); }
+        h4 { font-size: 18px; color: #555;}
         p { font-size: 16px; margin-bottom: 20px; color: #555;}
-
-        /* --- LAYOUT & CONTAINERS --- */
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
         }
-
-        /* --- STICKY HEADER & NAV --- */
         header {
             background: #fff;
             box-shadow: 0 2px 10px rgba(0,0,0,0.1);
@@ -55,14 +42,12 @@
             top: 0;
             z-index: 1000;
         }
-
         .header-wrap {
             display: flex;
             justify-content: space-between;
             align-items: center;
             padding: 10px 0;
         }
-
         .brand-logo {
             font-size: 28px;
             color: var(--primary-blue);
@@ -70,23 +55,18 @@
             text-decoration: none;
             letter-spacing: 2px;
         }
-
         .nav-links {
             display: flex;
             gap: 25px;
             align-items: center;
         }
-
         .nav-links a {
             text-decoration: none;
             color: var(--text-dark);
             font-weight: 600;
             transition: color 0.3s;
         }
-
         .nav-links a:hover { color: var(--primary-blue); }
-
-        /* Dropdown Support */
         .dropdown { position: relative; }
         .dropdown-content {
             display: none;
@@ -108,8 +88,6 @@
         }
         .dropdown-content a:last-child { border-bottom: none; }
         .dropdown-content a:hover { background-color: #f1f1f1; color: var(--primary-blue); }
-
-        /* --- CALL-TO-ACTION (CTA) BUTTONS --- */
         .btn {
             display: inline-block;
             text-decoration: none;
@@ -119,28 +97,19 @@
             transition: all 0.3s ease;
             cursor: pointer;
         }
-
-        /* Golden CTA Button */
         .btn-gold {
             background: var(--secondary-gold);
             color: #000 !important;
             padding: 12px 25px;
         }
-
         .btn-gold:hover { background: #e6b800; transform: translateY(-2px);}
-
-        /* Accent Green Button (e.g., for 'About Us' or 'Meet the Team') */
         .btn-green {
             background: #2ecc71;
             color: #fff !important;
             padding: 12px 25px;
         }
-
         .btn-green:hover { background: #27ae60; transform: translateY(-2px);}
-
-        /* --- HERO SECTION --- */
         .hero {
-            /* Updated to use a high-quality relevant painting image (unsplash stock) */
             background: linear-gradient(rgba(0,51,102,0.7), rgba(0,51,102,0.7)), 
                         url('https://images.unsplash.com/photo-1599616198642-e1378887e472?auto=format&fit=crop&q=80&w=2000');
             background-size: cover;
@@ -152,38 +121,29 @@
             text-align: center;
             color: #fff;
         }
-
         .hero-content { max-width: 800px; padding: 0 20px;}
         .hero-content h1 { color: #fff;}
         .hero-content p { color: rgba(255,255,255,0.9); font-size: 22px; margin-bottom: 40px;}
-
-        /* --- PROOF / STATS BAR --- */
         .trust-bar {
             background: var(--primary-blue);
             color: #fff;
             padding: 40px 0;
             text-align: center;
         }
-
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
         }
-
         .stat-item h3 { font-size: 48px; color: var(--secondary-gold); margin: 0; line-height: 1;}
         .stat-item p { color: rgba(255,255,255,0.8); text-transform: uppercase; font-weight: 700; margin-top: 10px;}
-
-        /* --- SERVICES SECTION (VISUAL CARDS) --- */
         .services { padding: 90px 0; background: var(--bg-light); }
         .section-header { text-align: center; margin-bottom: 60px; max-width: 700px; margin-left: auto; margin-right: auto;}
-
         .service-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
         }
-
         .service-card {
             background: #fff;
             border-radius: 10px;
@@ -193,16 +153,28 @@
             text-align: center;
         }
         .service-card:hover { transform: translateY(-10px); box-shadow: 0 10px 40px rgba(0,0,0,0.12); }
-
-        .service-card i {
-            font-size: 45px;
-            color: #2ecc71; /* Energetic accent green for icons */
-            margin: 40px 0 20px;
+        .service-icon {
+            background-color: var(--primary-blue);
+            color: #fff;
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 40px auto 20px;
+            transition: all 0.3s ease;
         }
-
+        .service-card:hover .service-icon {
+            background-color: var(--secondary-gold);
+            color: var(--primary-blue);
+        }
+        .service-card i {
+            font-size: 40px;
+            color: inherit;
+            margin: 0;
+        }
         .card-content { padding: 0 30px 40px; }
-
-        /* --- THE BIRK PROCESS (5-STEP JOURNEY) --- */
         .process { padding: 90px 0; }
         .process-grid {
             display: grid;
@@ -224,21 +196,14 @@
             justify-content: center;
             margin: 0 auto 20px;
         }
-
-        /* --- TESTIMONIALS (Updated Authors from original site copy) --- */
-        .testimonials { background: var(--primary-blue); color: #fff; padding: 90px 0; text-align: center;}
-        .testimonials h2 { color: #fff;}
-        .testimonials p { color: rgba(255,255,255,0.8); }
-
+        .testimonials { background: var(--bg-light); color: var(--text-dark); padding: 90px 0; text-align: center;}
+        .testimonials h2 { color: var(--primary-blue);}
+        .testimonials p { color: var(--text-dark); }
         .quote-slider { max-width: 850px; margin: 0 auto; }
-        .quote-text { font-size: 20px; font-style: italic; color: #fff; line-height: 1.8;}
-        .quote-author { font-weight: 700; text-transform: uppercase; color: var(--secondary-gold); }
-
-        /* --- PORTFOLIO PROOF / SLIDER PLACEHOLDER --- */
+        .quote-text { font-size: 20px; font-style: italic; color: var(--text-dark); line-height: 1.8;}
+        .quote-author { font-weight: 700; text-transform: uppercase; color: var(--primary-blue); }
         .portfolio-proof { padding: 90px 0;}
         .proof-wrap { text-align: center;}
-        
-        /* Placeholder styling for a before-and-after slider */
         .ba-slider-placeholder {
             background: #eee;
             border-radius: 10px;
@@ -252,8 +217,6 @@
             border: 2px dashed #ccc;
             margin-top: 40px;
         }
-
-        /* --- FOOTER --- */
         footer {
             background: #111;
             color: rgba(255,255,255,0.7);
@@ -262,21 +225,18 @@
         }
         footer p { color: rgba(255,255,255,0.7); font-size: 14px;}
         .footer-logo { font-size: 36px; color: var(--primary-blue); margin-bottom: 20px;}
-
-        /* --- RESPONSIVE ADJUSTMENTS --- */
         @media (max-width: 768px) {
             h1 { font-size: 36px; }
-            .nav-links { display: none; } /* Hide regular nav for mobile */
+            .nav-links { display: none; }
             .hero { height: 75vh; }
             .service-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
-
     <header>
         <div class="container header-wrap">
-            <a href="#" class="brand-logo">Birk Painting</a>
+            <a href="#hero" class="brand-logo">Birk Painting</a>
             <nav class="nav-links">
                 <div class="dropdown">
                     <a href="#services">Services</a>
@@ -287,22 +247,56 @@
                         <a href="#specialty">Specialty Finishes</a>
                     </div>
                 </div>
-                <a href="#about">Our Team</a>
+                <a href="#about">About Us</a>
                 <a href="#process">Process</a>
                 <a href="#proof">Our Work</a>
+                <a href="#contact">Contact</a>
                 <a href="tel:5195550123"><i class="fas fa-phone"></i> (519) 555-0123</a>
                 <a href="#contact" class="btn btn-gold">Free Estimate</a>
             </nav>
+            <div class="social-media-icons" style="margin-left: 20px;">
+                <a href="#" style="color: var(--primary-blue); margin: 0 10px; font-size: 20px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: var(--primary-blue); margin: 0 10px; font-size: 20px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: var(--primary-blue); margin: 0 10px; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
     </header>
 
-    <section class="hero">
+    <section id="hero" class="hero">
         <div class="hero-content">
             <h1>Kitchener & Waterloo's Premier Painting Professionals</h1>
             <p>Transforming interior and exterior spaces with quality, efficiency, and unrivaled customer satisfaction in Baden, Kitchener, and Waterloo since 2001.</p>
             <div style="display: flex; gap: 20px; justify-content: center;">
                 <a href="#contact" class="btn btn-gold" style="font-size: 18px; padding: 15px 40px;">Book Your Free Estimate</a>
-                <a href="#proof" class="btn btn-green" style="font-size: 18px; padding: 15px 40px;">Meet Our Team</a>
+                <a href="#about" class="btn btn-green" style="font-size: 18px; padding: 15px 40px;">Meet Our Team</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Birk Painting</h2>
+                <p>Birk Painting was founded in 2001 and has painted over 1000 projects to date. We pride ourselves on being professional, on-time, on budget, clean and trustworthy. We are a team of professionals who guarantee your job is done right, on time and on budget. We focus on quality, efficiency & above all customer satisfaction. We protect & cover floors, furniture & any surfaces that are not to come in contact with paint.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="proof" class="portfolio-proof">
+        <div class="container proof-wrap">
+            <div class="section-header">
+                <h2>Our Work</h2>
+                <p>Check out our latest projects on Instagram!</p>
+            </div>
+            <a href="https://www.instagram.com/birkpaintingkw/" class="btn btn-green" style="margin-top: 50px;">View Our Instagram</a>
+        </div>
+    </section>
+
+    <section id="contact" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Phone: (519) 555-0123 | Email: davinder@birkpainting.com</p>
             </div>
         </div>
     </section>
@@ -332,41 +326,42 @@
             </div>
             <div class="service-grid">
                 <div id="interior" class="service-card">
-                    <i class="fas fa-home"></i>
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
                     <div class="card-content">
                         <h3>Interior Painting</h3>
                         <p>Walls, ceilings, trim, and doors. Preciseexecution with clean, efficient results.</p>
                     </div>
                 </div>
                 <div id="exterior" class="service-card">
-                    <i class="fas fa-paint-roller"></i>
+                    <div class="service-icon"><i class="fas fa-paint-roller"></i></div>
                     <div class="card-content">
                         <h3>Exterior Painting</h3>
                         <p>Protecting your home's curb appeal: stucco, siding, and wood transformation.</p>
                     </div>
                 </div>
                 <div id="cabinet" class="service-card">
-                    <i class="fas fa-spray-can"></i>
+                    <div class="service-icon"><i class="fas fa-spray-can"></i></div>
                     <div class="card-content">
                         <h3>Professional Spraying</h3>
                         <p>Cabinet refinishing and furniture for a durable, factory-smooth finish.</p>
                     </div>
                 </div>
                 <div id="specialty" class="service-card">
-                    <i class="fas fa-brush"></i> <div class="card-content">
+                    <div class="service-icon"><i class="fas fa-brush"></i></div>
+                    <div class="card-content">
                         <h3>Venetian Plaster</h3>
                         <p>Specialized high-end decorative finishes personally applied by Davinder.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-tools"></i>
+                    <div class="service-icon"><i class="fas fa-tools"></i></div>
                     <div class="card-content">
                         <h3>Drywall Repair</h3>
                         <p>seamless repairs crack, hole, and water damage before we apply paint.</p>
                     </div>
                 </div>
                 <div class="service-card">
-                    <i class="fas fa-scythe"></i>
+                    <div class="service-icon"><i class="fas fa-ruler-combined"></i></div>
                     <div class="card-content">
                         <h3>Wallpaper Removal</h3>
                         <p>Clean, efficient removal, and wall prep for a new coat of paint.</p>
@@ -399,23 +394,17 @@
             </div>
             <div class="quote-slider">
                 <i class="fas fa-quote-left" style="font-size: 40px; color: var(--secondary-gold); margin-bottom: 20px;"></i>
-                <p class="quote-text">"Davinder and his crew painted our house several years ago and recently painted our office over the Christmas holidays. They were unfailingly professional and dependability, delivering top notch results with tight timelines. We recommend Birk Painting without hesitation!"</p>
+                <p class="quote-text">"Had several estimates but went with Birk Painting as Davinder really knows his trade and offered much help in selecting the right type of paint for our space. He ensured the job was done to our complete satisfaction and left our place tidy. No hesitation to use again and highly recommend"</p>
+                <p class="quote-author">D. Steward, Kitchener</p>
+
+                <i class="fas fa-quote-left" style="font-size: 40px; color: var(--secondary-gold); margin-bottom: 20px; margin-top: 40px;"></i>
+                <p class="quote-text">"Davinder and his crew painted our house several years ago and more recently painted our office over the Christmas holidays. They were very professional and completed the job on time and on budget! They showed up everyday until the job was done. His team was very professional and courteous. We have had several complements on the paint job and we are very pleased with his work. He did not need to come back for touch ups as he and his team did such a thorough job the first time. We would highly recommend him for residential or commercial work!"</p>
+                <p class="quote-author">Rick + Nancy, Baden Dental Clinic, Baden</p>
+
+                <i class="fas fa-quote-left" style="font-size: 40px; color: var(--secondary-gold); margin-bottom: 20px; margin-top: 40px;"></i>
+                <p class="quote-text">"Our company, Rooms in Bloom Home Staging & Design Inc., has worked with Birk Painting on many occasions. Without fail, Davinder and his team are always unfailingly professional and dependable, delivering top notch results with our often tight timelines. We refer Birk Painting without hesitation to our clients on a consistent basis and always look forward to working with them on new projects"</p>
                 <p class="quote-author">Heather & Alana, Rooms in Bloom Home Staging & Design Inc., Kitchener</p>
             </div>
-        </div>
-    </section>
-
-    <section id="proof" class="portfolio-proof">
-        <div class="container proof-wrap">
-            <div class="section-header">
-                <h2>Our Transformations</h2>
-                <p>Definitive visual proof of our attention to detail and professional results.</p>
-            </div>
-            <div class="ba-slider-placeholder">
-                <p>[ Placeholder: Add Interactive Before-and-After Slider Here ]<br>
-                   Showcase transformations like Cabinet Spraying or a full exterior refresh.</p>
-            </div>
-            <a href="#contact" class="btn btn-green" style="margin-top: 50px;">See Our Portfolio</a>
         </div>
     </section>
 
@@ -425,6 +414,11 @@
             <p>Professional Interior & Exterior Painters Serving Kitchener, Waterloo, Baden, Wilmot, and Surrounding regions Since 2001.</p>
             <p>123 Local St., Kitchener, ON N2H 123.</p>
             <p>Phone: (519) 555-0123 | Email: davinder@birkpainting.com</p>
+            <div class="social-media-icons" style="margin-top: 20px; margin-bottom: 20px;">
+                <a href="#" style="color: #fff; margin: 0 15px; font-size: 24px;"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" style="color: #fff; margin: 0 15px; font-size: 24px;"><i class="fab fa-twitter"></i></a>
+                <a href="#" style="color: #fff; margin: 0 15px; font-size: 24px;"><i class="fab fa-instagram"></i></a>
+            </div>
             <p style="margin-top: 40px; font-size: 12px; color: rgba(255,255,255,0.5);">© 2024 Birk Painting. Kitchener Waterloo Painting Contractors. All Rights Reserved.</p>
         </div>
     </footer>
