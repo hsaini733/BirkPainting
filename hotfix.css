@@ -1,0 +1,21 @@
+/* HOTFIX: IMMEDIATE, HIGH-PRIORITY STYLES TO CORRECT ICON AND LOGO SIZES */
+
+/* Force larger icons in the Services section */
+#services .service-icon i {
+    font-size: 4rem !important; /* 4rem is a significant, visible increase */
+    margin-bottom: 25px !important;
+}
+
+/* Force larger icons in the Process section */
+#process .process-icon i {
+    font-size: 4rem !important;
+    margin-bottom: 25px !important;
+}
+
+/* Ensure partner logos are visible and not greyscaled */
+.partners-grid .partner-item img {
+    filter: none !important;
+    opacity: 1 !important;
+    max-width: 150px; /* You can adjust this value as needed */
+    height: auto;
+}
