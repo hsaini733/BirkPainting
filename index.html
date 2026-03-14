@@ -56,9 +56,9 @@
                          <a href="#contact" class="btn btn-gold d-none d-lg-inline-block">Free Estimate</a>
                     </div>
                     <div class="social-media-icons mr-3">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1XxjigXhjU/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                        <!-- a href="#"><i class="fab fa-twitter"></i></a !-->
+                        <a href="https://www.instagram.com/birkpaintingkw/"><i class="fab fa-instagram"></i></a>
                     </div>
                     <button class="theme-toggle" id="theme-toggle" title="Toggles light & dark" aria-label="auto" aria-live="polite">
                         <i class="fas fa-moon"></i>
@@ -114,15 +114,27 @@
         <div class="container proof-wrap">
             <div class="section-header">
                 <h2>Our Work</h2>
-                <p>Check out our latest projects on Instagram!</p>
+                <p>A small selection of recent interior and exterior projects.</p>
             </div>
             <div class="instagram-grid">
-                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta01.jpg" alt="Birk Painting Instagram"></a>
-                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta02.jpg" alt="Birk Painting Instagram"></a>
-                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta03.jpg" alt="Birk Painting Instagram"></a>
-                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta04.jpg" alt="Birk Painting Instagram"></a>
-                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta05.jpg" alt="Birk Painting Instagram"></a>
-                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta06.jpg" alt="Birk Painting Instagram"></a>
+                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank">
+                    <img src="archive/images/portfolio1.jpg" alt="Birk Painting project 1">
+                </a>
+                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank">
+                    <img src="archive/images/portfolio2.jpg" alt="Birk Painting project 2">
+                </a>
+                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank">
+                    <img src="archive/images/portfolio3.jpg" alt="Birk Painting project 3">
+                </a>
+                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank">
+                    <img src="archive/images/portfolio4.jpg" alt="Birk Painting project 4">
+                </a>
+                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank">
+                    <img src="archive/images/portfolio5.jpg" alt="Birk Painting project 5">
+                </a>
+                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank">
+                    <img src="archive/images/portfolio6.jpg" alt="Birk Painting project 6">
+                </a>
             </div>
         </div>
     </section>
@@ -323,9 +335,9 @@
             <div class="footer-column">
                 <h4>Connect</h4>
                 <div class="social-media-icons-footer">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1XxjigXhjU/?mibextid=wwXIfr"><i class="fab fa-facebook-f"></i></a>
+                    <!--a href="#"><i class="fab fa-twitter"></i></a!-->
+                    <a href="https://www.instagram.com/birkpaintingkw/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
         </div>
@@ -415,18 +427,106 @@
             initCursor();
         }
 
-        // ----- Testimonials: animate when section enters viewport -----
+        // ----- Navbar: stronger shadow after scroll -----
+        const navbar = document.querySelector('.navbar');
+        if (navbar) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    navbar.classList.add('navbar--scrolled');
+                } else {
+                    navbar.classList.remove('navbar--scrolled');
+                }
+            });
+        }
+
+        // ----- Testimonials: animate + simple carousel -----
         const testimonialsSection = document.getElementById('testimonials');
-        if (testimonialsSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            const observer = new IntersectionObserver((entries) => {
+        const quoteSlider = document.querySelector('.quote-slider');
+        const quoteItems = quoteSlider ? quoteSlider.querySelectorAll('.quote-item') : [];
+
+        function initTestimonialsCarousel() {
+            if (!quoteSlider || !quoteItems.length) return;
+
+            let current = 0;
+            let timerId = null;
+
+            const dotsContainer = document.createElement('div');
+            dotsContainer.className = 'testimonial-dots';
+            const dots = [];
+
+            quoteItems.forEach((item, index) => {
+                const dot = document.createElement('button');
+                dot.type = 'button';
+                dot.className = 'testimonial-dot';
+                dot.setAttribute('aria-label', `Show testimonial ${index + 1}`);
+                dot.addEventListener('click', () => {
+                    setActive(index);
+                    restartTimer();
+                });
+                dotsContainer.appendChild(dot);
+                dots.push(dot);
+            });
+
+            quoteSlider.appendChild(dotsContainer);
+
+            function setActive(index) {
+                current = index;
+                quoteItems.forEach((item, i) => {
+                    item.classList.toggle('is-active', i === index);
+                });
+                dots.forEach((dot, i) => {
+                    dot.classList.toggle('is-active', i === index);
+                });
+            }
+
+            function next() {
+                const nextIndex = (current + 1) % quoteItems.length;
+                setActive(nextIndex);
+            }
+
+            function restartTimer() {
+                if (timerId) clearInterval(timerId);
+                timerId = setInterval(next, 9000);
+            }
+
+            setActive(0);
+            restartTimer();
+        }
+
+        if (testimonialsSection) {
+            if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('testimonials--visible');
+                            initTestimonialsCarousel();
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+                observer.observe(testimonialsSection);
+            } else {
+                testimonialsSection.classList.add('testimonials--visible');
+                initTestimonialsCarousel();
+            }
+        }
+
+        // ----- Generic scroll reveal for key cards -----
+        if (!prefersReducedMotion && 'IntersectionObserver' in window) {
+            const revealEls = document.querySelectorAll('.welcome-box, .service-card, .process-item, .stat-item, .partner-item, .contact-form');
+            const revealObserver = new IntersectionObserver((entries, obs) => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
-                        entry.target.classList.add('testimonials--visible');
-                        observer.unobserve(entry.target);
+                        entry.target.classList.add('reveal', 'is-visible');
+                        obs.unobserve(entry.target);
                     }
                 });
-            }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
-            observer.observe(testimonialsSection);
+            }, { rootMargin: '0px 0px -40px 0px', threshold: 0.15 });
+
+            revealEls.forEach((el) => {
+                el.classList.add('reveal');
+                revealObserver.observe(el);
+            });
         }
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
