@@ -13,39 +13,22 @@
     <meta property="og:type" content="website">
 
     <title>Birk Painting | Professional Kitchener & Waterloo Painters Since 2001</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css?v=1.9">
+    <link rel="stylesheet" href="style.css?v=2">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <style>
-        /* HOTFIX: IMMEDIATE, HIGH-PRIORITY STYLES TO CORRECT ICON AND LOGO SIZES */
-
-        /* Force larger icons in the Services section */
-        #services .service-icon i {
-            font-size: 4rem !important; /* 4rem is a significant, visible increase */
-            margin-bottom: 25px !important;
-        }
-
-        /* Force larger icons in the Process section */
-        #process .process-icon i {
-            font-size: 4rem !important;
-            margin-bottom: 25px !important;
-        }
-
-        /* Ensure partner logos are visible and not greyscaled */
-        .partners-grid .partner-item img {
-            filter: none !important;
-            opacity: 1 !important;
-            max-width: 150px; /* You can adjust this value as needed */
-            height: auto;
-        }
-    </style>
 </head>
 <body>
+    <!-- Custom cursor (hidden on touch devices via JS) -->
+    <div class="cursor cursor-dot" aria-hidden="true"></div>
+    <div class="cursor cursor-ring" aria-hidden="true"></div>
 
     <nav class="navbar navbar-expand-lg sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#hero"><img src="archive/images/logo.jpg" alt="Birk Painting" style="height: 50px;"></a>
+            <a class="navbar-brand" href="#hero"><img src="archive/images/logo.jpg" alt="Birk Painting"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -86,10 +69,10 @@
         </div>
     </nav>
 
-    <section id="hero" class="hero">
+    <section id="hero" class="hero hero--animate">
         <div class="hero-content">
-            <h1>Kitchener & Waterloo's Premier Painting Professionals</h1>
-            <p>Transforming interior and exterior spaces with quality, efficiency, and unrivaled customer satisfaction in Baden, Kitchener, and Waterloo since 2001.</p>
+            <h1 class="hero-title">Kitchener & Waterloo's Premier Painting Professionals</h1>
+            <p class="hero-subtitle">Transforming interior and exterior spaces with quality, efficiency, and unrivaled customer satisfaction in Baden, Kitchener, and Waterloo since 2001.</p>
             <div class="hero-buttons">
                 <a href="#contact" class="btn btn-gold">Book Your Free Estimate</a>
                 <a href="#about" class="btn btn-green">Meet Our Team</a>
@@ -97,7 +80,7 @@
         </div>
     </section>
 
-    <section id="about" class="services">
+    <section id="about" class="services section-alt">
         <div class="container">
             <div class="section-header">
 				<div class="title">
@@ -136,7 +119,7 @@
             <div class="instagram-grid">
                 <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta01.jpg" alt="Birk Painting Instagram"></a>
                 <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta02.jpg" alt="Birk Painting Instagram"></a>
-                <a href="https://www.instagram.com/birkpaintingkw/!" target="_blank"><img src="archive/images/insta03.jpg" alt="Birk Painting Instagram"></a>
+                <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta03.jpg" alt="Birk Painting Instagram"></a>
                 <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta04.jpg" alt="Birk Painting Instagram"></a>
                 <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta05.jpg" alt="Birk Painting Instagram"></a>
                 <a href="https://www.instagram.com/birkpaintingkw/" target="_blank"><img src="archive/images/insta06.jpg" alt="Birk Painting Instagram"></a>
@@ -282,23 +265,27 @@
         </div>
     </section>
 
-    <section class="testimonials">
+    <section class="testimonials section-alt" id="testimonials">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header testimonials-header">
                 <h2>What Our Local Clients Say</h2>
             </div>
             <div class="quote-slider">
-                <i class="fas fa-quote-left quote-icon"></i>
-                <p class="quote-text">"Had several estimates but went with Birk Painting as Davinder really knows his trade and offered much help in selecting the right type of paint for our space. He ensured the job was done to our complete satisfaction and left our place tidy. No hesitation to use again and highly recommend"</p>
-                <p class="quote-author">D. Steward, Kitchener</p>
-
-                <i class="fas fa-quote-left quote-icon"></i>
-                <p class="quote-text">"Davinder and his crew painted our house several years ago and more recently painted our office over the Christmas holidays. They were very professional and completed the job on time and on budget! They showed up everyday until the job was done. His team was very professional and courteous. We have had several complements on the paint job and we are very pleased with his work. He did not need to come back for touch ups as he and his team did such a thorough job the first time. We would highly recommend him for residential or commercial work!"</p>
-                <p class="quote-author">Rick + Nancy, Baden Dental Clinic, Baden</p>
-
-                <i class="fas fa-quote-left quote-icon"></i>
-                <p class="quote-text">"Our company, Rooms in Bloom Home Staging & Design Inc., has worked with Birk Painting on many occasions. Without fail, Davinder and his team are always unfailingly professional and dependable, delivering top notch results with our often tight timelines. We refer Birk Painting without hesitation to our clients on a consistent basis and always look forward to working with them on new projects"</p>
-                <p class="quote-author">Heather & Alana, Rooms in Bloom Home Staging & Design Inc., Kitchener</p>
+                <div class="quote-item">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote-text">"Had several estimates but went with Birk Painting as Davinder really knows his trade and offered much help in selecting the right type of paint for our space. He ensured the job was done to our complete satisfaction and left our place tidy. No hesitation to use again and highly recommend"</p>
+                    <p class="quote-author">D. Steward, Kitchener</p>
+                </div>
+                <div class="quote-item">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote-text">"Davinder and his crew painted our house several years ago and more recently painted our office over the Christmas holidays. They were very professional and completed the job on time and on budget! They showed up everyday until the job was done. His team was very professional and courteous. We have had several complements on the paint job and we are very pleased with his work. He did not need to come back for touch ups as he and his team did such a thorough job the first time. We would highly recommend him for residential or commercial work!"</p>
+                    <p class="quote-author">Rick + Nancy, Baden Dental Clinic, Baden</p>
+                </div>
+                <div class="quote-item">
+                    <i class="fas fa-quote-left quote-icon"></i>
+                    <p class="quote-text">"Our company, Rooms in Bloom Home Staging & Design Inc., has worked with Birk Painting on many occasions. Without fail, Davinder and his team are always unfailingly professional and dependable, delivering top notch results with our often tight timelines. We refer Birk Painting without hesitation to our clients on a consistent basis and always look forward to working with them on new projects"</p>
+                    <p class="quote-author">Heather & Alana, Rooms in Bloom Home Staging & Design Inc., Kitchener</p>
+                </div>
             </div>
         </div>
     </section>
@@ -376,6 +363,71 @@
         window.addEventListener('DOMContentLoaded', () => {
             setTheme(getTheme());
         });
+
+        // ----- Custom cursor: smooth, transitive follow -----
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorRing = document.querySelector('.cursor-ring');
+        const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        function initCursor() {
+            if (!cursorDot || !cursorRing || prefersReducedMotion) return;
+            let x = 0, y = 0;
+            let ringX = 0, ringY = 0;
+            let visible = false;
+
+            document.body.classList.add('cursor-custom');
+
+            function tick() {
+                ringX += (x - ringX) * 0.18;
+                ringY += (y - ringY) * 0.18;
+                cursorDot.style.transform = `translate(${x}px, ${y}px)`;
+                cursorRing.style.transform = `translate(${ringX}px, ${ringY}px)`;
+                requestAnimationFrame(tick);
+            }
+            requestAnimationFrame(tick);
+
+            document.addEventListener('mousemove', (e) => {
+                x = e.clientX;
+                y = e.clientY;
+                if (!visible) {
+                    visible = true;
+                    cursorDot.classList.add('cursor--visible');
+                    cursorRing.classList.add('cursor--visible');
+                }
+            });
+
+            document.addEventListener('mouseleave', () => {
+                cursorDot.classList.remove('cursor--visible');
+                cursorRing.classList.remove('cursor--visible');
+                visible = false;
+            });
+
+            // Slightly enlarge over clickable elements
+            const hoverables = document.querySelectorAll('a, button, [role="button"], .btn, input, textarea');
+            hoverables.forEach(el => {
+                el.addEventListener('mouseenter', () => cursorRing.classList.add('cursor--hover'));
+                el.addEventListener('mouseleave', () => cursorRing.classList.remove('cursor--hover'));
+            });
+        }
+
+        // Only enable custom cursor for pointer devices (not touch)
+        if (window.matchMedia('(pointer: fine)').matches) {
+            initCursor();
+        }
+
+        // ----- Testimonials: animate when section enters viewport -----
+        const testimonialsSection = document.getElementById('testimonials');
+        if (testimonialsSection && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('testimonials--visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -60px 0px', threshold: 0.1 });
+            observer.observe(testimonialsSection);
+        }
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
